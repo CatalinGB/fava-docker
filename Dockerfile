@@ -11,7 +11,8 @@ RUN git clone https://github.com/beancount/fava
 WORKDIR /tmp/build/fava
 RUN apt-get update
 RUN apt-get install -y build-essential libxml2-dev libxslt-dev curl \
-        python3 libpython3-dev python3-pip git python3-venv pybabel
+        python3 libpython3-dev python3-pip git python3-venv
+RUN python3 -mpip install babel
 RUN git checkout ${FAVA_VERSION}
 RUN make
 RUN make mostlyclean
