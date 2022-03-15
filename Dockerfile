@@ -72,8 +72,8 @@ RUN pip3 uninstall -y pip
 
 RUN find /app -name __pycache__ -exec rm -rf -v {} +
 
-FROM gcr.io/distroless/python3-debian10
-COPY --from=build_env /app /app
+#FROM gcr.io/distroless/python3-debian10
+#COPY --from=build_env /app /app
 
 # Default fava port number
 EXPOSE 5000
