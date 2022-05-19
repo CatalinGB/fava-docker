@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mr-smithers-excellent/docker-build-push@v2
         with:
-          image: ${IMAGE_NAME}
+          image: CatalinGB/fava-docker
           tag: latest
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -70,7 +70,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mr-smithers-excellent/docker-build-push@v2
         with:
-          image: ${IMAGE_NAME}
+          image: CatalinGB/fava-docker
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
