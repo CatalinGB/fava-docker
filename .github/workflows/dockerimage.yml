@@ -17,7 +17,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: grostim/fava-docker
+  IMAGE_NAME: CatalinGB/fava-docker
 
 jobs:
   # On fait les tests dans tous les cas : pull et PR
