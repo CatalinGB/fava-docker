@@ -91,4 +91,4 @@ ENV PATH "/app/bin:$PATH"
 
 ENV FAVA_OPTIONS ""
 
-ENTRYPOINT ["fava", "${FAVA_OPTIONS}", "${BEANCOUNT_FILE}"]
+ENTRYPOINT ["./entrypoint.sh"]
