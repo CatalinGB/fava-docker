@@ -80,6 +80,8 @@ EXPOSE 5000
 
 ENV BEANCOUNT_FILE ""
 
+ENV PYTHONPATH "${PYTHONPATH}:/bean/"
+
 # Required by Click library.
 # See https://click.palletsprojects.com/en/7.x/python3/
 ENV LC_ALL "C.UTF-8"
