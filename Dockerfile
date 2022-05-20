@@ -89,6 +89,6 @@ ENV LANG "C.UTF-8"
 ENV FAVA_HOST "0.0.0.0"
 ENV PATH "/app/bin:$PATH"
 
-ENV FAVA_OPTIONS ""
+COPY entrypoint.sh /bean/entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/bean/entrypoint.sh"]
