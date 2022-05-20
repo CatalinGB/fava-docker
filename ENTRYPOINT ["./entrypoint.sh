@@ -1,2 +1,0 @@
-#!/bin/sh
-fava $FAVA_OPTIONS $BEANCOUNT_FILE
