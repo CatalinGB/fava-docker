@@ -1,5 +1,5 @@
 ARG BEANCOUNT_VERSION=2.3.5
-ARG NODE_BUILD_IMAGE=14.18.1-buster
+ARG NODE_BUILD_IMAGE=bullseye-slim
 
 FROM node:${NODE_BUILD_IMAGE} as node_build_env
 ARG SOURCE_BRANCH
@@ -17,7 +17,7 @@ RUN git checkout ${FAVA_VERSION}
 RUN make
 RUN make mostlyclean
 
-FROM debian:buster as build_env
+FROM debian:bullseye-slim as build_env
 ARG BEANCOUNT_VERSION
 
 RUN apt-get update
@@ -89,6 +89,8 @@ ENV LC_ALL "C.UTF-8"
 ENV LANG "C.UTF-8"
 ENV FAVA_HOST "0.0.0.0"
 ENV PATH "/app/bin:$PATH"
+
+WORKDIR /bean
 
 COPY entrypoint.sh /bean/entrypoint.sh
 
