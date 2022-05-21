@@ -79,6 +79,7 @@ RUN find /app -name __pycache__ -exec rm -rf -v {} +
 EXPOSE 5000
 
 ENV BEANCOUNT_FILE ""
+ENV FAVA_OPTIONS ""
 
 ENV PYTHONPATH "${PYTHONPATH}:/bean/"
 
@@ -90,5 +91,7 @@ ENV FAVA_HOST "0.0.0.0"
 ENV PATH "/app/bin:$PATH"
 
 COPY entrypoint.sh /bean/entrypoint.sh
+
+RUN chmod a+x /bean/entrypoint.sh
 
 ENTRYPOINT ["/bean/entrypoint.sh"]
