@@ -81,7 +81,7 @@ EXPOSE 5000
 ENV BEANCOUNT_FILE ""
 ENV FAVA_OPTIONS ""
 
-ENV PYTHONPATH "${PYTHONPATH}:/bean/"
+ENV PYTHONPATH "${PYTHONPATH}:/bean/importers"
 
 # Required by Click library.
 # See https://click.palletsprojects.com/en/7.x/python3/
