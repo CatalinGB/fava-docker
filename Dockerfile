@@ -62,6 +62,7 @@ RUN python3 -mpip install git+https://github.com/beancount/beanprice.git
 RUN python3 -mpip install tariochbctools
 RUN python3 -mpip install flake8
 RUN python3 -mpip install babel
+RUN python3 -mpip install beancount-import
 RUN python3 -mpip install git+https://github.com/redstreet/fava_investor
 RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
 
