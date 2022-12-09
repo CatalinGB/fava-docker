@@ -24,7 +24,6 @@ RUN apt-get update
 RUN apt-get install -y build-essential libxml2-dev libxslt-dev curl \
         python3 libpython3-dev python3-pip git python3-venv
 
-
 ENV PATH "/app/bin:$PATH"
 RUN python3 -mvenv /app
 RUN pip3 install -U pip setuptools
