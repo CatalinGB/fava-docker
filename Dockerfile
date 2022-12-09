@@ -3,7 +3,7 @@ ARG NODE_BUILD_IMAGE=14.18.1-buster
 
 FROM node:${NODE_BUILD_IMAGE} as node_build_env
 ARG SOURCE_BRANCH
-ENV FAVA_VERSION=${SOURCE_BRANCH:-v1.21}
+ENV FAVA_VERSION=v1.23.1
 
 WORKDIR /tmp/build
 RUN git clone https://github.com/beancount/fava
