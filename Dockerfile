@@ -66,6 +66,7 @@ RUN python3 -mpip install beancount-import
 RUN python3 -mpip install git+https://github.com/redstreet/fava_investor
 RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
 RUN python3 -mpip install nordigen
+RUN python3 -mpip install thefuzz
 
 WORKDIR /tmp/build
 RUN git clone https://github.com/redstreet/fava_investor.git
