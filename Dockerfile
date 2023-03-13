@@ -17,7 +17,7 @@ RUN git checkout ${FAVA_VERSION}
 RUN make
 RUN make mostlyclean
 
-FROM debian:bullseye-slim as build_env
+FROM debian:bullseye-20230109-slim as build_env
 ARG BEANCOUNT_VERSION
 
 RUN apt-get update
