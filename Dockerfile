@@ -29,7 +29,7 @@ ARG BEANCOUNT_VERSION
 
 RUN apt-get update
 RUN apt-get install -y build-essential libxml2-dev libxslt-dev curl \
-        python3 libpython3-dev python3-pip git python3-venv
+        python3 libpython3-dev python3-pip git python3-venv coreutils
 
 
 ENV PATH "/app/bin:$PATH"
