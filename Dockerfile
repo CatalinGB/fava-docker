@@ -29,7 +29,7 @@ ARG BEANCOUNT_VERSION
 
 RUN apt-get update
 RUN apt-get install -y build-essential libxml2-dev libxslt-dev curl \
-        python3 libpython3-dev python3-pip git python3-venv
+        python3 libpython3-dev python3-pip git python3-venv coreutils
 
 
 ENV PATH "/app/bin:$PATH"
@@ -62,7 +62,7 @@ RUN python3 -mpip install tariochbctools
 RUN python3 -mpip install flake8
 RUN python3 -mpip install beancount-import
 RUN python3 -mpip install git+https://github.com/redstreet/fava_investor
-RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
+#RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
 RUN python3 -mpip install nordigen
 RUN python3 -mpip install thefuzz
 
@@ -99,8 +99,9 @@ ENV PATH "/app/bin:$PATH"
 
 WORKDIR /bean
 
+#USER root
 COPY entrypoint.sh /bean/entrypoint.sh
-
-RUN chmod a+x /bean/entrypoint.sh
+#RUN chmod a+x /bean/entrypoint.sh
+#USER 1001
 
 ENTRYPOINT ["/bean/entrypoint.sh"]
