@@ -95,7 +95,7 @@ ENV PATH "/app/bin:$PATH"
 WORKDIR /bean
 
 #USER root
-COPY entrypoint.sh /bean/entrypoint.sh
+#COPY entrypoint.sh /bean/entrypoint.sh
 #RUN chmod a+x /bean/entrypoint.sh
 #USER 1001
 
