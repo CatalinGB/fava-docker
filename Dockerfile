@@ -48,19 +48,19 @@ RUN pip3 install -U /tmp/build/fava
 #RUN python3 -mpip install pytest
 #RUN pip3 install -U pip setuptools
 #RUN python3 -mpip install babel
-RUN python3 -mpip install smart_importer 
-RUN python3 -mpip install beancount_portfolio_allocation
+#RUN python3 -mpip install smart_importer 
+#RUN python3 -mpip install beancount_portfolio_allocation
 #RUN python3 -mpip install beancount-plugins-metadata-spray
 #RUN python3 -mpip install beancount-interpolate
 #RUN python3 -mpip install iexfinance
 #RUN python3 -mpip install black
 #RUN python3 -mpip install argh
 #RUN python3 -mpip install argcomplete
-RUN python3 -mpip install pre-commit
-RUN python3 -mpip install git+https://github.com/beancount/beanprice.git
+#RUN python3 -mpip install pre-commit
+#RUN python3 -mpip install git+https://github.com/beancount/beanprice.git
 #RUN python3 -mpip install tariochbctools
-RUN python3 -mpip install flake8
-RUN python3 -mpip install beancount-import
+#RUN python3 -mpip install flake8
+#RUN python3 -mpip install beancount-import
 RUN python3 -mpip install git+https://github.com/redstreet/fava_investor
 #RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
 RUN python3 -mpip install nordigen
@@ -99,4 +99,5 @@ COPY entrypoint.sh /bean/entrypoint.sh
 #RUN chmod a+x /bean/entrypoint.sh
 #USER 1001
 
-ENTRYPOINT ["/bean/entrypoint.sh"]
+#ENTRYPOINT ["/bean/entrypoint.sh"]
+CMD fava $FAVA_OPTIONS $BEANCOUNT_FILE
