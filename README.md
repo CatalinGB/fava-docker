@@ -13,3 +13,4 @@ Forked from Yegle in order to add:
 - cron
 - beancount-plugins-metadata-spray
 - beancount interpolate (https://github.com/Akuukis/beancount-interpolate)
+- fava-dashboards (https://github.com/andreasgerstmayr/fava-dashboards.git)
