@@ -1,5 +1,5 @@
 ARG BEANCOUNT_VERSION=2.3.5
-ARG FAVA_VERSION=v1.25.1
+ARG FAVA_VERSION=v1.25
 
 ARG NODE_BUILD_IMAGE=16-bullseye
 FROM node:${NODE_BUILD_IMAGE} as node_build_env
@@ -29,7 +29,6 @@ ARG BEANCOUNT_VERSION
 RUN apt-get update
 RUN apt-get install -y build-essential libxml2-dev libxslt-dev curl \
         python3 libpython3-dev python3-pip git python3-venv
-
 
 ENV PATH "/app/bin:$PATH"
 RUN python3 -mvenv /app
@@ -64,7 +63,7 @@ RUN python3 -mpip install argh
 RUN python3 -mpip install argcomplete
 RUN python3 -mpip install pre-commit
 RUN python3 -mpip install git+https://github.com/beancount/beanprice.git
-RUN python3 -mpip install tariochbctools
+RUN python3 -mpip install git+https://github.com/CatalinGB/beancounttools.git
 RUN python3 -mpip install flake8
 RUN python3 -mpip install babel
 RUN python3 -mpip install beancount-import
