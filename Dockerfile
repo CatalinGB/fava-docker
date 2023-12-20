@@ -46,7 +46,7 @@ ADD requirements.txt .
 RUN pip3 install --require-hashes -U -r requirements.txt
 RUN python3 -mpip install pytest
 RUN apt-get update
-RUN apt-get install -y tig git nano build-essential gcc poppler-utils wget git bash vim
+RUN apt-get install -y tig git nano build-essential gcc poppler-utils wget git bash vim tmux
 RUN apt-get -y install cron
 RUN touch /var/log/cron.log
 # Setup cron job
@@ -71,13 +71,10 @@ RUN python3 -mpip install git+https://github.com/redstreet/fava_investor
 RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-income-reports.git
 RUN python3 -mpip install nordigen
 RUN python3 -mpip install thefuzz
+RUN python3 -mpip install tariochbctools
 RUN python3 -mpip install git+https://github.com/andreasgerstmayr/fava-dashboards.git
 
 WORKDIR /tmp/build
-RUN git clone https://github.com/redstreet/fava_investor.git
-RUN pip install ./fava_investor
-
-RUN pip3 uninstall -y pip
 
 RUN find /app -name __pycache__ -exec rm -rf -v {} +
 
