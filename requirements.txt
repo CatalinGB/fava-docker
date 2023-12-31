@@ -3,7 +3,7 @@ tariochbctools==0.32.0
 smart-importer==0.4
 beancount-reds-plugins==0.3.0
 fava-dashboards @ git+https://github.com/andreasgerstmayr/fava-dashboards.git@main
-beancount_portfolio_allocation==0.3.3
+beancount_portfolio_allocation==0.3.0
 beancount-interpolate==2.5.0
 git+https://github.com/beancount/beanprice.git
 git+https://github.com/CatalinGB/beancounttools.git
